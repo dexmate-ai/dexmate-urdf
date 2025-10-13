@@ -24,6 +24,13 @@ This repository contains high-fidelity robot models in Unified Robot Description
 pip install dexmate_urdf
 ```
 
+or install from source
+```shell
+cp -r robots/* src/dexmate_urdf/robots/
+python scripts/workflows/generate_content.py
+pip install -e .
+```
+
 ## 🚀 Quick Start
 
 ```python

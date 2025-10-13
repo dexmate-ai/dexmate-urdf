@@ -1,6 +1,8 @@
 # Copyright (c) 2022-2025, The Isaac Lab Project Developers.
 # All rights reserved.
 #
+# Copyright 2025 Dexmate Inc.
+#
 # SPDX-License-Identifier: BSD-3-Clause
 
 """

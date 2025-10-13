@@ -1,9 +1,22 @@
+# Copyright 2025 Dexmate Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import argparse
 import subprocess
 from pathlib import Path
 
 from scripts.workflows.decomp_urdf_collision_meshes import decompose_urdf
-from scripts.workflows.generate_sub_urdf import generate_robot_model_sub_urdf
 
 CONVERT_SCRIPT = Path("scripts/workflows/convert_urdf.py")
 SRC_ROOT = Path(__file__).parent.parent.parent / "robots"
@@ -66,6 +79,11 @@ def main():
         default="python",
         help="Path to the Python executable to use for subprocess calls (default: python).",
     )
+    parser.add_argument(
+        "--sub_urdf",
+        action="store_true",
+        help="Generate sub-URDFs.",
+    )
     args = parser.parse_args()
 
     output_dir = Path(args.output_dir)
@@ -75,7 +93,20 @@ def main():
     all_urdf_paths = []
     for robot_model_dir in TARGET_ROBOT_DIRS:
         robot_model_dir = SRC_ROOT / robot_model_dir
-        urdf_paths = generate_robot_model_sub_urdf(robot_model_dir, robot_exceptions=[])
+        if args.sub_urdf:
+            from scripts.workflows.generate_sub_urdf import (
+                generate_robot_model_sub_urdf,
+            )
+
+            urdf_paths = generate_robot_model_sub_urdf(
+                robot_model_dir, robot_exceptions=[]
+            )
+        else:
+            urdf_paths = [
+                p
+                for p in robot_model_dir.rglob("*.urdf")
+                if not p.name.endswith(".collision.urdf")
+            ]
         all_urdf_paths.extend(urdf_paths)
 
     # Convert all URDFs to USD
