@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dexmate-urdf"
-version = "0.7.1"
+version = "0.8.0"
 license = { file = "LICENSE" }
 authors = [{ name = "Dexmate", email = "contact@dexmate.ai" }]
 description = "URDF model and tools for Dexmate robots"

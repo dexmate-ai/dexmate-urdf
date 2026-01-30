@@ -24,6 +24,8 @@ SRC_ROOT = Path(__file__).parent.parent.parent / "robots"
 # Add the robot directories to process here
 TARGET_ROBOT_DIRS = [
     "humanoid/vega_1",
+    "humanoid/vega_1p",
+    "humanoid/vega_1u",
 ]
 
 
@@ -40,10 +42,9 @@ def convert_urdf_to_usd(urdf_path: Path, output_dir: Path, python_exe: Path) -> 
     """
     decomposed_urdf_path = decompose_urdf(urdf_path)
 
-    robot_version = urdf_path.parent.name
-    robot_full_name = f"{urdf_path.stem}-{robot_version}"
-    usd_dir = output_dir / robot_full_name
-    usd_path = usd_dir / f"{urdf_path.stem}.usd"
+    robot_name = urdf_path.stem
+    usd_dir = output_dir / robot_name
+    usd_path = usd_dir / f"{robot_name}.usd"
     usd_dir.mkdir(parents=True, exist_ok=True)
 
     cmd = [
@@ -58,7 +59,7 @@ def convert_urdf_to_usd(urdf_path: Path, output_dir: Path, python_exe: Path) -> 
     subprocess.check_call(cmd)
 
     # Create zip file of the generated USD directory
-    zip_path = f"../{robot_full_name}.zip"
+    zip_path = f"../{robot_name}.zip"
     subprocess.check_call(["zip", "-r", str(zip_path), "."], cwd=str(usd_dir))
 
 
@@ -79,11 +80,6 @@ def main():
         default="python",
         help="Path to the Python executable to use for subprocess calls (default: python).",
     )
-    parser.add_argument(
-        "--sub_urdf",
-        action="store_true",
-        help="Generate sub-URDFs.",
-    )
     args = parser.parse_args()
 
     output_dir = Path(args.output_dir)
@@ -93,20 +89,7 @@ def main():
     all_urdf_paths = []
     for robot_model_dir in TARGET_ROBOT_DIRS:
         robot_model_dir = SRC_ROOT / robot_model_dir
-        if args.sub_urdf:
-            from scripts.workflows.generate_sub_urdf import (
-                generate_robot_model_sub_urdf,
-            )
-
-            urdf_paths = generate_robot_model_sub_urdf(
-                robot_model_dir, robot_exceptions=[]
-            )
-        else:
-            urdf_paths = [
-                p
-                for p in robot_model_dir.rglob("*.urdf")
-                if not p.name.endswith(".collision.urdf")
-            ]
+        urdf_paths = list(robot_model_dir.rglob("*.urdf"))
         all_urdf_paths.extend(urdf_paths)
 
     # Convert all URDFs to USD

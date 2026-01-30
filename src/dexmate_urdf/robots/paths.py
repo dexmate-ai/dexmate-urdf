@@ -144,7 +144,7 @@ class RobotModel:
             if urdf_path.suffix == ".urdf":
                 model_name = urdf_path.stem
                 self._urdf_models[model_name] = URDFModel(
-                    robot_type, robot_name, urdf_path.name
+                    robot_type, robot_name, urdf_path.stem
                 )
 
     @property
@@ -182,11 +182,14 @@ class RobotType:
         self._type = robot_type
         self._models: dict[str, RobotModel] = {}
 
+        # Directories to skip (shared assets, not robot models)
+        skip_dirs = {"meshes", "internal"}
+
         # Dynamically load robot models
         type_dir = get_robot_dir() / robot_type
         if type_dir.exists():
             for robot_dir in type_dir.iterdir():
-                if robot_dir.is_dir():
+                if robot_dir.is_dir() and robot_dir.name not in skip_dirs:
                     model_name = robot_dir.name
                     self._models[model_name] = RobotModel(robot_type, model_name)
 

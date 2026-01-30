@@ -18,6 +18,8 @@ This repository contains high-fidelity robot models in Unified Robot Description
 - 🎨 Visualization
 - 🛠️ Control System Development
 
+The corresponding USD files are be found in the [Release](https://github.com/dexmate-ai/dexmate-urdf/releases).
+
 ## 📦 Installation
 
 ```shell
@@ -37,12 +39,22 @@ pip install -e .
 from dexmate_urdf import robots
 
 # Access different robot models and configurations
-vega_srdf_path = robots.humanoid.vega_1.vega.srdf
-vega_collision_urdf_path = robots.humanoid.vega_1.vega.collision_spheres_urdf
-vega_upper_body_only_urdf_path = robots.humanoid.vega_1.vega_upper_body.urdf
+# Base variants
+vega_1_urdf = robots.humanoid.vega_1.vega_1.urdf
+vega_1u_urdf = robots.humanoid.vega_1u.vega_1u.urdf
+vega_1p_urdf = robots.humanoid.vega_1p.vega_1p.urdf
+
+# Variants with different end-effectors
+vega_1_f5d6_urdf = robots.humanoid.vega_1.vega_1_f5d6.urdf
+vega_1_gripper_urdf = robots.humanoid.vega_1.vega_1_gripper.urdf
+vega_1u_f5d6_urdf = robots.humanoid.vega_1u.vega_1u_f5d6.urdf
+
+# Access SRDF and collision URDFs
+vega_1_srdf = robots.humanoid.vega_1.vega_1.srdf
+vega_1_collision = robots.humanoid.vega_1.vega_1.collision_spheres_urdf
 
 # Load into your favorite simulator
-load_robot(vega_upper_body_only_urdf_path)
+load_robot(vega_1_f5d6_urdf)
 ```
 
 ## 🤖 Available Models
@@ -68,12 +80,20 @@ Our models are tested with popular robotics frameworks:
 ```python
 dexmate_urdf.robots
 ├── humanoid/
-│   └── vega_1/
-│       ├── vega.urdf            # Full robot URDF
-│       ├── vega.srdf            # Semantic robot description
-│       ├── vega_upper_body.urdf # Upper body only configuration
-│       ├── collision.urdf       # With convex collision meshes
-│       └── collision_spheres.urdf # With sphere collision meshes
+│   ├── vega_1/                  # Base variant folder
+│   │   ├── vega_1.urdf          # Base variant (no hands)
+│   │   ├── vega_1_f5d6.urdf     # With F5D6 hands
+│   │   ├── vega_1_gripper.urdf  # With gripper hands
+│   │   ├── vega.urdf            # Alias (symlink to vega_1_f5d6)
+│   │   └── configs/             # Variant-specific configs
+│   ├── vega_1u/                  # Upper body variants
+│   │   ├── vega_1u.urdf
+│   │   ├── vega_1u_f5d6.urdf
+│   │   └── vega_1u_gripper.urdf
+│   └── vega_1p/                  # Pro variants
+│       ├── vega_1p.urdf
+│       ├── vega_1p_f5d6.urdf
+│       └── vega_1p_gripper.urdf
 └── ... # More robots
 ```
 
