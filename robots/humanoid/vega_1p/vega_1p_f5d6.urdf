@@ -805,7 +805,7 @@
     </visual>
   </link>
   <joint name="back_lidar_mount" type="fixed">
-    <origin xyz="-0.34 0 0.0985" rpy="1.57079 3.1415 0" />
+    <origin xyz="-0.34 0 0.0985" rpy="3.14156 0 3.14159" />
     <parent link="base" />
     <child link="back_lidar" />
   </joint>
@@ -824,7 +824,7 @@
     </visual>
   </link>
   <joint name="front_lidar_mount" type="fixed">
-    <origin xyz="0.306 0 0.287" rpy="3.1415 0 0" />
+    <origin xyz="0.306 0 0.287" rpy="-0.6981 0 -1.57079" />
     <parent link="base" />
     <child link="front_lidar" />
   </joint>

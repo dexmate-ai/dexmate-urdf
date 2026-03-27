@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.1] - 2026-03-26
+
+### Improved
+- Improved vega_1u modeling to match the real robot
+
+### Fixed
+- Fixed lidar joint orientations (`back_lidar_mount`, `front_lidar_mount`) in all vega_1p variants (`vega_1p.urdf`, `vega_1p_f5d6.urdf`, `vega_1p_gripper.urdf`) to ensure consistent lidar mounting across all configurations
+
 ## [0.8.0] - 2025-12-18
 
 ### New Robot Variants

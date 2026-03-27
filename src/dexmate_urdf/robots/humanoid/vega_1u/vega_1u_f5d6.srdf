@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <robot name="vega_1u_f5d6">
-  <disable_collisions link1="torso_l3" link2="L_arm_l1" reason="Always"/>
-  <disable_collisions link1="torso_l3" link2="L_arm_l2" reason="Never"/>
-  <disable_collisions link1="torso_l3" link2="R_arm_l1" reason="Always"/>
-  <disable_collisions link1="torso_l3" link2="R_arm_l2" reason="Never"/>
-  <disable_collisions link1="torso_l3" link2="head_l1" reason="Always"/>
-  <disable_collisions link1="torso_l3" link2="head_l2" reason="Default"/>
-  <disable_collisions link1="torso_l3" link2="head_l3" reason="Default"/>
+  <disable_collisions link1="torso_flip_link" link2="L_arm_l1" reason="Always"/>
+  <disable_collisions link1="torso_flip_link" link2="L_arm_l2" reason="Never"/>
+  <disable_collisions link1="torso_flip_link" link2="R_arm_l1" reason="Always"/>
+  <disable_collisions link1="torso_flip_link" link2="R_arm_l2" reason="Never"/>
+  <disable_collisions link1="torso_flip_link" link2="head_l1" reason="Always"/>
+  <disable_collisions link1="torso_flip_link" link2="head_l2" reason="Default"/>
+  <disable_collisions link1="torso_flip_link" link2="head_l3" reason="Default"/>
   <disable_collisions link1="L_arm_l1" link2="L_arm_l2" reason="Always"/>
   <disable_collisions link1="L_arm_l1" link2="L_arm_l3" reason="Never"/>
   <disable_collisions link1="L_arm_l1" link2="L_arm_l4" reason="Never"/>

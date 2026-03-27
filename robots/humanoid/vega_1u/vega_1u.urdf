@@ -1,28 +1,85 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?> <!-- This URDF was automatically created by SolidWorks to URDF
+Exporter! Originally created by Stephen Brawner (brawner@gmail.com) Commit Version: 1.6.0-4-g7f85cfe
+Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot name="vega_1u">
-  <link name="torso_l3">
+  <link name="base_link">
     <inertial>
-      <origin xyz="-0.05623 -0.08424 0.25675" rpy="0 0 0" />
-      <mass value="5.32886" />
-      <inertia ixx="0.11076" ixy="-0.00246" ixz="0.015" iyy="0.10555" iyz="0.01137" izz="0.02731" />
+      <origin xyz="-0.00062 -0.07869 0.02414" rpy="0 0 0" />
+      <mass value="18.91029" />
+      <inertia ixx="0.60638" ixy="3.13065E-10" ixz="-1.05197E-05" iyy="0.74482" iyz="3.24349E-07"
+        izz="0.89592" />
     </inertial>
     <visual>
-      <origin xyz="0 0.0775 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="1.57079 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/torso_l3.glb" />
+        <mesh filename="meshes/visual/base_link.glb" />
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0.0775 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="1.57079 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/torso_l3.obj" />
+        <mesh filename="meshes/visual/base_link.glb" />
       </geometry>
     </collision>
   </link>
+  <link name="lift_link">
+    <inertial>
+      <origin xyz="-2.81873E-06 0.00032 0.5141" rpy="0 0 0" />
+      <mass value="4.35777" />
+      <inertia ixx="0.19538" ixy="1.8612E-07" ixz="-5.15148E-11" iyy="0.19546" iyz="1.27577E-06"
+        izz="0.01487" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57079 0 0" />
+      <geometry>
+        <mesh filename="meshes/visual/lift_link.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57079 0 0" />
+      <geometry>
+        <mesh filename="meshes/visual/lift_link.glb" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Lift" type="prismatic">
+    <origin xyz="0 0 0.01" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="lift_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0.4" effort="0" velocity="0.05" />
+  </joint>
+  <link name="torso_flip_link">
+    <inertial>
+      <origin xyz="-1.71092E-05 0.06383 0.00204" rpy="0 0 0" />
+      <mass value="0.71794" />
+      <inertia ixx="0.00119" ixy="1.8612E-07" ixz="-5.15157E-11" iyy="0.00128" iyz="1.27577E-06"
+        izz="0.00244" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57079 0 0" />
+      <geometry>
+        <mesh filename="meshes/visual/torso_link.glb" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.57079 0 0" />
+      <geometry>
+        <mesh filename="meshes/visual/torso_link.glb" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_flip" type="revolute">
+    <origin xyz="0 -0.06187 0.786" rpy="0 0 0" />
+    <parent link="lift_link" />
+    <child link="torso_flip_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1" effort="0" velocity="0.1" />
+  </joint>
   <link name="arm_center" />
   <joint name="arm_center_j0" type="fixed">
-    <origin xyz="-0.05908 0 0.44528" rpy="0 0 0" />
-    <parent link="torso_l3" />
+    <origin xyz="0 0.03852 0.25982" rpy="0 0 -1.57079" />
+    <parent link="torso_flip_link" />
     <child link="arm_center" />
   </joint>
   <link name="head_l1">
@@ -128,7 +185,6 @@
     <child link="zed_right_camera" />
     <axis xyz="0 0 0" />
   </joint>
-
   <link name="L_arm_l1">
     <inertial>
       <origin xyz="0.0285 0.05287 0.00576" rpy="0 0 0" />
@@ -348,7 +404,6 @@
     <parent link="L_arm_l8" />
     <child link="L_ee" />
   </joint>
-
   <link name="R_arm_l1">
     <inertial>
       <origin xyz="0.02833 -0.05 0.0054" rpy="0 0 0" />
@@ -568,5 +623,4 @@
     <parent link="R_arm_l8" />
     <child link="R_ee" />
   </joint>
-
 </robot>
