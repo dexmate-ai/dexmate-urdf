@@ -144,7 +144,7 @@ class RobotModel:
             if urdf_path.suffix == ".urdf":
                 model_name = urdf_path.stem
                 self._urdf_models[model_name] = URDFModel(
-                    robot_type, robot_name, urdf_path.name
+                    robot_type, robot_name, urdf_path.stem
                 )
 
     @property

@@ -27,8 +27,8 @@ def to_pascal_case(name: str) -> str:
 
 def to_python_identifier(name: str) -> str:
     """Convert a string to a valid Python identifier."""
-    # Replace hyphens with underscores
-    return name.replace("-", "_")
+    # Replace hyphens and dots with underscores
+    return name.replace("-", "_").replace(".", "_")
 
 
 def get_base_model_name(model_name: str) -> str:
@@ -139,8 +139,10 @@ def generate_content():
 
                     # Collect URDF files directly from model directory
                     for file in model_dir.iterdir():
-                        if file.suffix == ".urdf" and not file.name.endswith(
-                            ".collision.urdf"
+                        if (
+                            file.suffix == ".urdf"
+                            and not file.name.endswith(".collision.urdf")
+                            and ".collision_" not in file.name
                         ):
                             robot_models[type_name][model_name].append(file.name)
 
@@ -247,7 +249,11 @@ def generate_content():
             "get_all_robot_dirs",
             [],
             [ast.Return(value=ast.List(elts=[], ctx=ast.Load()))],
-            returns=ast.Name(id="list[RobotModel]", ctx=ast.Load()),
+            returns=ast.Subscript(
+                value=ast.Name(id="list", ctx=ast.Load()),
+                slice=ast.Name(id="RobotModel", ctx=ast.Load()),
+                ctx=ast.Load(),
+            ),
         )
     )
 
