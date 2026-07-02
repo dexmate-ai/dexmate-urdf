@@ -163,10 +163,9 @@
   </joint>
   <link name="torso_l1">
     <inertial>
-      <origin xyz="0.17712 -0.06463 0.03987" rpy="0 0 0" />
+      <origin xyz="0.17657 -0.00001 0.03662" rpy="0 0 0" />
       <mass value="8.83234" />
-      <inertia ixx="0.03291" ixy="-0.00068" ixz="-0.03389" iyy="0.22172" iyz="-0.00057"
-        izz="0.20771" />
+      <inertia ixx="0.03458" ixy="-0.00001" ixz="-0.03872" iyy="0.21403" iyz="0" izz="0.21374" />
     </inertial>
     <visual>
       <origin xyz="0 0.08 0" rpy="0 0 0" />
@@ -190,7 +189,7 @@
   </joint>
   <link name="torso_l2">
     <inertial>
-      <origin xyz="-0.19819 -0.02173 0.04732" rpy="0 0 0" />
+      <origin xyz="-0.19819 -0.00173 0.04732" rpy="0 0 0" />
       <mass value="14.58926" />
       <inertia ixx="0.05538" ixy="-0.00091" ixz="0.07372" iyy="0.42465" iyz="0.00023" izz="0.39283" />
     </inertial>
@@ -216,9 +215,9 @@
   </joint>
   <link name="torso_l3">
     <inertial>
-      <origin xyz="-0.05623 -0.08424 0.25675" rpy="0 0 0" />
+      <origin xyz="-0.05642 -0.0018 0.25693" rpy="0 0 0" />
       <mass value="5.32886" />
-      <inertia ixx="0.11076" ixy="-0.00246" ixz="0.015" iyy="0.10555" iyz="0.01137" izz="0.02731" />
+      <inertia ixx="0.11149" ixy="-0.00024" ixz="0.01478" iyy="0.10493" iyz="0.00081" izz="0.02720" />
     </inertial>
     <visual>
       <origin xyz="0 0.0775 0" rpy="0 0 0" />
@@ -275,10 +274,9 @@
   </joint>
   <link name="head_l2">
     <inertial>
-      <origin xyz="3.533E-05 0.01618 0.03389" rpy="0 0 0" />
+      <origin xyz="5.66105e-07 0.000244411 0.0303453" rpy="0 0 0" />
       <mass value="0.60772" />
-      <inertia ixx="0.00052" ixy="8.06625E-08" ixz="-1.98086E-08" iyy="0.00039" iyz="-0.0001"
-        izz="0.0005" />
+      <inertia ixx="0.000559127" ixy="-7.39058e-10" ixz="3.61875e-09" iyy="0.000331023" iyz="5.3256e-06" izz="0.00051985" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />

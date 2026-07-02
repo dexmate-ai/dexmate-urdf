@@ -180,10 +180,9 @@
   </joint>
   <link name="head_l2">
     <inertial>
-      <origin xyz="3.533E-05 0.01618 0.03389" rpy="0 0 0" />
+      <origin xyz="5.66105e-07 0.000244411 0.0303453" rpy="0 0 0" />
       <mass value="0.60772" />
-      <inertia ixx="0.00052" ixy="8.06625E-08" ixz="-1.98086E-08" iyy="0.00039" iyz="-0.0001"
-        izz="0.0005" />
+      <inertia ixx="0.000559127" ixy="-7.39058e-10" ixz="3.61875e-09" iyy="0.000331023" iyz="5.3256e-06" izz="0.00051985" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
