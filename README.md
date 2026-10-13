@@ -117,7 +117,7 @@ See the [LICENSE](./LICENSE) file for the complete license text.
 <div align="center">
   <h3>🤝 Need help with robot models?</h3>
   <p>
-    <a href="https://dexmate.ai">🌐 Visit Website</a> •
+    <a href="https://www.dexmate.com">🌐 Visit Website</a> •
     <a href="mailto:contact@dexmate.ai">📧 Contact Us</a> •
     <a href="./robots/">📚 View Robots</a>
   </p>
