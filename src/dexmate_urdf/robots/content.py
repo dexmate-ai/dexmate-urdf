@@ -1,6 +1,46 @@
 from .paths import RobotModel, RobotType, URDFModel
 
 
+class Vega1Model(RobotModel):
+    @property
+    def vega_1_gripper(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1_gripper")
+
+    @property
+    def vega_1_f5d6(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1_f5d6")
+
+    @property
+    def vega_1(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1")
+
+
+class Vega1pModel(RobotModel):
+    @property
+    def vega_1p_f5d6(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1p_f5d6")
+
+    @property
+    def vega_1p_no_ft(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1p_no_ft")
+
+    @property
+    def vega_1p(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1p")
+
+    @property
+    def vega_1p_no_ft_gripper(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1p_no_ft_gripper")
+
+    @property
+    def vega_1p_no_ft_f5d6(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1p_no_ft_f5d6")
+
+    @property
+    def vega_1p_gripper(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1p_gripper")
+
+
 class Vega1uModel(RobotModel):
     @property
     def vega_1u(self) -> URDFModel:
@@ -11,50 +51,30 @@ class Vega1uModel(RobotModel):
         return URDFModel(self._type, self._name, "vega_1u_f5d6")
 
     @property
+    def vega_1u_no_ft(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1u_no_ft")
+
+    @property
+    def vega_1u_no_ft_f5d6(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1u_no_ft_f5d6")
+
+    @property
     def vega_1u_gripper(self) -> URDFModel:
         return URDFModel(self._type, self._name, "vega_1u_gripper")
 
-
-class Vega1pModel(RobotModel):
     @property
-    def vega_1p_gripper(self) -> URDFModel:
-        return URDFModel(self._type, self._name, "vega_1p_gripper")
-
-    @property
-    def vega_1p(self) -> URDFModel:
-        return URDFModel(self._type, self._name, "vega_1p")
-
-    @property
-    def vega_1p_f5d6(self) -> URDFModel:
-        return URDFModel(self._type, self._name, "vega_1p_f5d6")
-
-
-class Vega1Model(RobotModel):
-    @property
-    def vega_1(self) -> URDFModel:
-        return URDFModel(self._type, self._name, "vega_1")
-
-    @property
-    def vega_1_f5d6(self) -> URDFModel:
-        return URDFModel(self._type, self._name, "vega_1_f5d6")
-
-    @property
-    def vega_1_gripper(self) -> URDFModel:
-        return URDFModel(self._type, self._name, "vega_1_gripper")
-
-    @property
-    def vega(self) -> URDFModel:
-        return URDFModel(self._type, self._name, "vega")
+    def vega_1u_no_ft_gripper(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "vega_1u_no_ft_gripper")
 
 
 class F5d6HandModel(RobotModel):
     @property
-    def f5d6_left(self) -> URDFModel:
-        return URDFModel(self._type, self._name, "f5d6_left")
-
-    @property
     def f5d6_right(self) -> URDFModel:
         return URDFModel(self._type, self._name, "f5d6_right")
+
+    @property
+    def f5d6_left(self) -> URDFModel:
+        return URDFModel(self._type, self._name, "f5d6_left")
 
 
 class DexdGripperModel(RobotModel):
@@ -71,16 +91,16 @@ class DexsGripperModel(RobotModel):
 
 class HumanoidType(RobotType):
     @property
-    def vega_1u(self) -> Vega1uModel:
-        return Vega1uModel("humanoid", "vega_1u")
+    def vega_1(self) -> Vega1Model:
+        return Vega1Model("humanoid", "vega_1")
 
     @property
     def vega_1p(self) -> Vega1pModel:
         return Vega1pModel("humanoid", "vega_1p")
 
     @property
-    def vega_1(self) -> Vega1Model:
-        return Vega1Model("humanoid", "vega_1")
+    def vega_1u(self) -> Vega1uModel:
+        return Vega1uModel("humanoid", "vega_1u")
 
 
 class HandsType(RobotType):

@@ -2,7 +2,7 @@ import importlib.resources
 from pathlib import Path
 from typing import Literal
 
-ROBOT_TYPES = Literal["hands", "humanoid", "arms", "assembly"]
+ROBOT_TYPES = Literal["hands", "humanoid"]
 
 
 def get_robot_dir() -> Path:
@@ -17,7 +17,7 @@ def get_robot_names(
     """Get all available robots for a given type.
 
     Args:
-        robot_type: Type of robot (hand, humanoid, arm, assembly)
+        robot_type: Type of robot (hands, humanoid)
 
     Returns:
         List of robot names available for the given type
@@ -35,7 +35,7 @@ def get_robot_path(
     """Get the path to a specific robot's directory.
 
     Args:
-        robot_type: Type of robot (hand, humanoid, arm, assembly)
+        robot_type: Type of robot (hands, humanoid)
         robot_name: Name of the robot
 
     Returns:
@@ -62,7 +62,7 @@ def get_urdf_paths(
     """Get the path to a robot's URDF file.
 
     Args:
-        robot_type: Type of robot (hand, humanoid, arm, assembly)
+        robot_type: Type of robot (hands, humanoid)
         robot_name: Name of the robot
 
     Returns:
@@ -81,7 +81,7 @@ def get_mesh_dir(
     """Get the path to a robot's mesh directory.
 
     Args:
-        robot_type: Type of robot (hand, humanoid, arm, assembly)
+        robot_type: Type of robot (hands, humanoid)
         robot_name: Name of the robot
 
     Returns:
@@ -186,7 +186,9 @@ class RobotType:
         type_dir = get_robot_dir() / robot_type
         if type_dir.exists():
             for robot_dir in type_dir.iterdir():
-                if robot_dir.is_dir():
+                # Skip asset directories such as robots/parts/<family>, which hold
+                # meshes shared by several models and have no URDF of their own.
+                if robot_dir.is_dir() and any(robot_dir.glob("*.urdf")):
                     model_name = robot_dir.name
                     self._models[model_name] = RobotModel(robot_type, model_name)
 

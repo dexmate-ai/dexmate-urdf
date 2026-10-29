@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?> <!-- This URDF was automatically created by SolidWorks to URDF
-Exporter! Originally created by Stephen Brawner (brawner@gmail.com) Commit Version: 1.6.0-4-g7f85cfe
-Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<?xml version="1.0" encoding="utf-8"?>
 <robot name="vega_1u">
   <link name="base_link">
     <inertial>
@@ -92,13 +90,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/head_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/head_l1.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/head_l1.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/head_l1.obj" />
       </geometry>
     </collision>
   </link>
@@ -118,13 +116,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/head_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/head_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/head_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/head_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -145,13 +143,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/head_l3.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/head_l3.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/head_l3.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/head_l3.obj" />
       </geometry>
     </collision>
   </link>
@@ -194,13 +192,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/L_arm_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/L_arm_l1.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/L_arm_l1.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/L_arm_l1.obj" />
       </geometry>
     </collision>
   </link>
@@ -221,13 +219,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -248,13 +246,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l3.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l3.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l3.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l3.obj" />
       </geometry>
     </collision>
   </link>
@@ -274,13 +272,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l4.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l4.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l4.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l4.obj" />
       </geometry>
     </collision>
   </link>
@@ -301,13 +299,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l5.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l5.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l5.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l5.obj" />
       </geometry>
     </collision>
   </link>
@@ -328,13 +326,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/L_arm_l6.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/L_arm_l6.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/L_arm_l6.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/L_arm_l6.obj" />
       </geometry>
     </collision>
   </link>
@@ -355,13 +353,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l7.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l7.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l7.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l7.obj" />
       </geometry>
     </collision>
   </link>
@@ -382,13 +380,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 -1.57079 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l8.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l8.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 -1.57079 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l8.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l8.obj" />
       </geometry>
     </collision>
   </link>
@@ -413,13 +411,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/R_arm_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/R_arm_l1.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/R_arm_l1.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/R_arm_l1.obj" />
       </geometry>
     </collision>
   </link>
@@ -440,13 +438,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -467,13 +465,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l3.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l3.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l3.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l3.obj" />
       </geometry>
     </collision>
   </link>
@@ -493,13 +491,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l4.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l4.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l4.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l4.obj" />
       </geometry>
     </collision>
   </link>
@@ -520,13 +518,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="3.14159 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l5.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l5.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="3.14159 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l5.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l5.obj" />
       </geometry>
     </collision>
   </link>
@@ -547,13 +545,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/R_arm_l6.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/R_arm_l6.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/R_arm_l6.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/R_arm_l6.obj" />
       </geometry>
     </collision>
   </link>
@@ -574,13 +572,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l7.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l7.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l7.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l7.obj" />
       </geometry>
     </collision>
   </link>
@@ -601,13 +599,13 @@ Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.o
     <visual>
       <origin xyz="0 0 0" rpy="0 -1.57079 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/visual/arm_l8.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l8.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 -1.57079 0" />
       <geometry>
-        <mesh filename="../vega_1/meshes/collision/arm_l8.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l8.obj" />
       </geometry>
     </collision>
   </link>

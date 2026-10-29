@@ -9,13 +9,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/base.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/base.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/base.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/base.obj" />
       </geometry>
     </collision>
   </link>
@@ -29,7 +29,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/B_wheel_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/B_wheel_l1.glb" />
       </geometry>
     </visual>
   </link>
@@ -49,13 +49,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/B_wheel_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/B_wheel_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/B_wheel_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/B_wheel_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -75,7 +75,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 3.14159" />
       <geometry>
-        <mesh filename="meshes/visual/wheel_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/wheel_l1.glb" />
       </geometry>
     </visual>
   </link>
@@ -96,13 +96,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 3.14159" />
       <geometry>
-        <mesh filename="meshes/visual/wheel_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/wheel_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 3.14159" />
       <geometry>
-        <mesh filename="meshes/collision/wheel_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/wheel_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -123,7 +123,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/wheel_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/wheel_l1.glb" />
       </geometry>
     </visual>
   </link>
@@ -144,13 +144,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/wheel_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/wheel_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/wheel_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/wheel_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -170,13 +170,13 @@
     <visual>
       <origin xyz="0 0.08 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/torso_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/torso_l1.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0.08 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/torso_l1.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/torso_l1.obj" />
       </geometry>
     </collision>
   </link>
@@ -196,13 +196,13 @@
     <visual>
       <origin xyz="0 0.02 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/torso_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/torso_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0.02 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/torso_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/torso_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -222,13 +222,13 @@
     <visual>
       <origin xyz="0 0.0775 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/torso_l3.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/torso_l3.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0.0775 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/torso_l3.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/torso_l3.obj" />
       </geometry>
     </collision>
   </link>
@@ -255,13 +255,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/head_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/head_l1.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/head_l1.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/head_l1.obj" />
       </geometry>
     </collision>
   </link>
@@ -281,13 +281,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/head_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/head_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/head_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/head_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -308,13 +308,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/head_l3.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/head_l3.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/head_l3.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/head_l3.obj" />
       </geometry>
     </collision>
   </link>
@@ -358,13 +358,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/L_arm_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/L_arm_l1.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/L_arm_l1.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/L_arm_l1.obj" />
       </geometry>
     </collision>
   </link>
@@ -385,13 +385,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -412,13 +412,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l3.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l3.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l3.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l3.obj" />
       </geometry>
     </collision>
   </link>
@@ -438,13 +438,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l4.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l4.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l4.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l4.obj" />
       </geometry>
     </collision>
   </link>
@@ -465,13 +465,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l5.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l5.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l5.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l5.obj" />
       </geometry>
     </collision>
   </link>
@@ -492,13 +492,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/L_arm_l6.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/L_arm_l6.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/L_arm_l6.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/L_arm_l6.obj" />
       </geometry>
     </collision>
   </link>
@@ -519,13 +519,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l7.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l7.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l7.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l7.obj" />
       </geometry>
     </collision>
   </link>
@@ -546,13 +546,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -1.57079 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l8.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l8.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 -1.57079 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l8.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l8.obj" />
       </geometry>
     </collision>
   </link>
@@ -578,13 +578,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/R_arm_l1.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/R_arm_l1.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/R_arm_l1.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/R_arm_l1.obj" />
       </geometry>
     </collision>
   </link>
@@ -605,13 +605,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l2.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l2.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l2.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l2.obj" />
       </geometry>
     </collision>
   </link>
@@ -632,13 +632,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l3.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l3.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l3.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l3.obj" />
       </geometry>
     </collision>
   </link>
@@ -658,13 +658,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l4.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l4.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l4.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l4.obj" />
       </geometry>
     </collision>
   </link>
@@ -685,13 +685,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="3.14159 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l5.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l5.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="3.14159 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l5.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l5.obj" />
       </geometry>
     </collision>
   </link>
@@ -712,13 +712,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/R_arm_l6.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/R_arm_l6.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/R_arm_l6.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/R_arm_l6.obj" />
       </geometry>
     </collision>
   </link>
@@ -739,13 +739,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l7.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l7.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l7.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l7.obj" />
       </geometry>
     </collision>
   </link>
@@ -766,13 +766,13 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -1.57079 0" />
       <geometry>
-        <mesh filename="meshes/visual/arm_l8.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/arm_l8.glb" />
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 -1.57079 0" />
       <geometry>
-        <mesh filename="meshes/collision/arm_l8.obj" />
+        <mesh filename="../../parts/vega_1/meshes/collision/arm_l8.obj" />
       </geometry>
     </collision>
   </link>
@@ -798,7 +798,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/lidar.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/lidar.glb" />
       </geometry>
     </visual>
   </link>
@@ -817,7 +817,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/imu.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/imu.glb" />
       </geometry>
     </visual>
   </link>
@@ -836,7 +836,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/base_cam.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/base_cam.glb" />
       </geometry>
     </visual>
   </link>
@@ -855,7 +855,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/base_cam.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/base_cam.glb" />
       </geometry>
     </visual>
   </link>
@@ -874,7 +874,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/base_cam.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/base_cam.glb" />
       </geometry>
     </visual>
   </link>
@@ -893,7 +893,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/base_cam.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/base_cam.glb" />
       </geometry>
     </visual>
   </link>
@@ -913,7 +913,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/ultrasonic.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/ultrasonic.glb" />
       </geometry>
     </visual>
   </link>
@@ -932,7 +932,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/ultrasonic.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/ultrasonic.glb" />
       </geometry>
     </visual>
   </link>
@@ -952,7 +952,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/ultrasonic.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/ultrasonic.glb" />
       </geometry>
     </visual>
   </link>
@@ -972,7 +972,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="meshes/visual/ultrasonic.glb" />
+        <mesh filename="../../parts/vega_1/meshes/visual/ultrasonic.glb" />
       </geometry>
     </visual>
   </link>

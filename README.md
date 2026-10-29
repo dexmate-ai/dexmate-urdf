@@ -35,6 +35,17 @@ pip install -e .
 
 ## 🚀 Quick Start
 
+Pick the model that matches your robot's hardware. `vega_1u` and `vega_1p` robots come with or without the wrist force/torque (FT) sensor; without it the flange is 30.2 mm shorter, so loading the other model puts the tool frame 30.2 mm off.
+
+```python
+from dexmate_urdf import vega
+
+model = vega.get_model("vega_1p", end_effector="f5d6", wrist_ft=False)  # end_effector: None, "f5d6", "gripper"
+model.urdf, model.srdf, model.collision_spheres_urdf
+```
+
+Models can also be accessed by file name:
+
 ```python
 from dexmate_urdf import robots
 
@@ -48,6 +59,9 @@ vega_1p_urdf = robots.humanoid.vega_1p.vega_1p.urdf
 vega_1_f5d6_urdf = robots.humanoid.vega_1.vega_1_f5d6.urdf
 vega_1_gripper_urdf = robots.humanoid.vega_1.vega_1_gripper.urdf
 vega_1u_f5d6_urdf = robots.humanoid.vega_1u.vega_1u_f5d6.urdf
+
+# Variants without the wrist FT sensor (vega_1u and vega_1p)
+vega_1p_no_ft_f5d6_urdf = robots.humanoid.vega_1p.vega_1p_no_ft_f5d6.urdf
 
 # Access SRDF and collision URDFs
 vega_1_srdf = robots.humanoid.vega_1.vega_1.srdf
@@ -80,22 +94,30 @@ Our models are tested with popular robotics frameworks:
 ```python
 dexmate_urdf.robots
 ├── humanoid/
-│   ├── vega_1/                  # Base variant folder
-│   │   ├── vega_1.urdf          # Base variant (no hands)
-│   │   ├── vega_1_f5d6.urdf     # With F5D6 hands
-│   │   ├── vega_1_gripper.urdf  # With gripper hands
-│   │   ├── vega.urdf            # Alias (symlink to vega_1_f5d6)
-│   │   └── configs/             # Variant-specific configs
-│   ├── vega_1u/                  # Upper body variants
+│   ├── vega_1/                   # Full body
+│   │   ├── vega_1.urdf           # No end effector
+│   │   ├── vega_1_f5d6.urdf      # With F5D6 hands
+│   │   ├── vega_1_gripper.urdf   # With grippers
+│   │   └── configs/              # Per-variant collision sphere configs
+│   ├── vega_1u/                  # Upper body
 │   │   ├── vega_1u.urdf
 │   │   ├── vega_1u_f5d6.urdf
-│   │   └── vega_1u_gripper.urdf
-│   └── vega_1p/                  # Pro variants
+│   │   ├── vega_1u_gripper.urdf
+│   │   └── vega_1u_no_ft*.urdf   # Same three, without the wrist FT sensor
+│   └── vega_1p/                  # Full body, pro
 │       ├── vega_1p.urdf
 │       ├── vega_1p_f5d6.urdf
-│       └── vega_1p_gripper.urdf
-└── ... # More robots
+│       ├── vega_1p_gripper.urdf
+│       └── vega_1p_no_ft*.urdf   # Same three, without the wrist FT sensor
+├── hands/                        # End effectors used by the models above
+│   ├── f5d6_hand/
+│   ├── dexs_gripper/
+│   └── dexd_gripper/
+└── parts/
+    └── vega_1/meshes/            # Meshes shared by vega_1, vega_1p, and vega_1u
 ```
+
+Mesh paths inside the URDFs are relative, so loading a model resolves them automatically.
 
 ## 📝 Changelog
 For information about recent updates and changes, please refer to the [CHANGELOG.md](CHANGELOG.md).
@@ -117,7 +139,7 @@ See the [LICENSE](./LICENSE) file for the complete license text.
 <div align="center">
   <h3>🤝 Need help with robot models?</h3>
   <p>
-    <a href="https://dexmate.ai">🌐 Visit Website</a> •
+    <a href="https://www.dexmate.com">🌐 Visit Website</a> •
     <a href="mailto:contact@dexmate.ai">📧 Contact Us</a> •
     <a href="./robots/">📚 View Robots</a>
   </p>

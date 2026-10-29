@@ -143,9 +143,9 @@
   </joint>
   <link name="L_mf_l1">
     <inertial>
-      <origin xyz="0.03832 -0.00051 -0.01587" rpy="0 0 0" />
-      <mass value="0.10211" />
-      <inertia ixx="9.82031E-05" ixy="4.89564E-06" ixz="-3.61758E-05" iyy="2.71614E-04" iyz="2.12856E-05" izz="3.10529E-04" />
+      <origin xyz="-0.01788 0.00010 -0.00978" rpy="0 0 0" />
+      <mass value="0.00190" />
+      <inertia ixx="9.59615E-08" ixy="-1.38745E-12" ixz="-5.32051E-08" iyy="2.34143E-07" iyz="-2.76724E-12" izz="2.28131E-07" />
     </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />

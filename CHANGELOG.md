@@ -5,6 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.0] - 2026-10-28
+
+### Added
+- No-FT variants for later `vega_1u` and `vega_1p` hardware without the wrist force/torque sensor: `<body>_no_ft`, `<body>_no_ft_f5d6`, `<body>_no_ft_gripper`. The replacement flange is 30.2 mm shorter, so the tool frame moves 30.2 mm toward the shoulder. Names without `_no_ft` still mean the FT wrist.
+- `dexmate_urdf.vega.get_model(body, end_effector=..., wrist_ft=...)` picks the model matching the robot's hardware; every option is required. `vega.list_variants()` lists what is built.
+
+### Changed
+- The `_f5d6` and `_gripper` variants are generated from their body files; kinematics, inertias, and meshes are unchanged.
+- Collision spheres now cover every link's shape to within 5 mm (except the `vega_1` and `vega_1p` wheels): spheres added on `base`, `lift_link`, `torso_flip_link`, `torso_l1`, `torso_l3`, and `head_l2`, and the arm spheres refit tighter for VR teleoperation.
+- Meshes shared by `vega_1`, `vega_1p`, and `vega_1u` moved to `parts/vega_1/meshes/`. Loading a model is unaffected; code that builds mesh paths by hand needs updating.
+
+### Removed
+- The `vega.urdf` and `vega.srdf` aliases for `vega_1_f5d6`. Use `vega_1_f5d6` or `vega.get_model("vega_1", end_effector="f5d6", wrist_ft=True)`.
+- The `arms` and `assembly` categories of `ROBOT_TYPES`.
+
+### Fixed
+- `vega_1u`'s stand (`base_link`) now has collision spheres; sphere-based checks missed it before. The SRDF disables it against `lift_link` and `torso_flip_link`, which cannot reach it.
+- DexS gripper collision spheres were those of the previous gripper; they now fit the current gripper and its camera.
+- Gripper finger joints open to 0.96 rad, the gripper's full range, instead of 0.7854.
+- Right thumb spheres on the F5D6 hand, copied from the left hand, now fit the right thumb.
+- `L_mf_l1` on the left F5D6 hand had a 0.10 kg inertial; it now mirrors `R_mf_l1` (0.0019 kg).
+- `vega_1_f5d6.srdf` and `vega_1p_f5d6.srdf` carried the robot name `vega-v1-zed`.
+
+## [0.8.4] - 2026-07-02
+
+### Changed
+- The `_gripper` variants carry the DexS gripper, with a wrist camera (`L_camera_link`, `R_camera_link`), instead of the DexD gripper.
+
+### Fixed
+- Torso and head inertials of `vega_1`, `vega_1p`, and `vega_1u` now match their geometry; their centers of mass sat up to 82 mm off the midline. `vega_1p`'s `back_lidar` inertia was about 30 times too large.
+
 ## [0.8.3] - 2026-05-07
 
 ### Changed

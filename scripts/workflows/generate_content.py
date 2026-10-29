@@ -132,7 +132,9 @@ def generate_content():
             robot_models[type_name] = {}
 
             for model_dir in type_dir.iterdir():
-                if model_dir.is_dir():
+                # Asset directories such as robots/parts/<family> hold shared
+                # meshes and no URDF, so they are not robot models.
+                if model_dir.is_dir() and any(model_dir.glob("*.urdf")):
                     model_name = model_dir.name
                     robot_types[type_name].append(model_name)
                     robot_models[type_name][model_name] = []
@@ -145,6 +147,12 @@ def generate_content():
                             and ".collision_" not in file.name
                         ):
                             robot_models[type_name][model_name].append(file.name)
+
+    # A directory of shared assets, such as robots/parts, holds no model and is
+    # therefore not a robot type either.
+    for type_name in [name for name, models in robot_models.items() if not models]:
+        del robot_types[type_name]
+        del robot_models[type_name]
 
     # Generate AST nodes for only the specific classes
     module_body = [

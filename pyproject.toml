@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dexmate-urdf"
-version = "0.8.4"
+version = "0.9.0"
 license = { file = "LICENSE" }
 authors = [{ name = "Dexmate", email = "contact@dexmate.ai" }]
 description = "URDF model and tools for Dexmate robots"
@@ -32,6 +32,8 @@ dev = [
     "pin==3.4.0",
     "pin-pink==3.1.0",
     "pytest",
+    "pyyaml",
+    "tyro",
     "qpsolvers[qpalm]",
     "pre-commit",
     "setuptools",
@@ -57,4 +59,5 @@ include-packages = ["src/dexmate_urdf"]
 artifacts = [
     "src/dexmate_urdf/robots/humanoid/**",
     "src/dexmate_urdf/robots/hands/**",
+    "src/dexmate_urdf/robots/parts/**",
 ]

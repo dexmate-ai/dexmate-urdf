@@ -18,12 +18,12 @@
         <mesh filename="meshes/visual/R_hand_base.glb" />
       </geometry>
     </visual>
-    <collision><origin xyz="-0.061000000685453415 -0.003000000026077032 -0.004999999888241291" rpy="0 0 0" /><geometry><sphere radius="0.05000000074505806" /></geometry></collision>
-    <collision><origin xyz="-0.024000000208616257 -0.0010000000474974513 -0.004000000189989805" rpy="0 0 0" /><geometry><sphere radius="0.0430000014603138" /></geometry></collision>
-    <collision><origin xyz="-0.09399999678134918 0.03099999949336052 -0.0010000000474974513" rpy="0 0 0" /><geometry><sphere radius="0.019999999552965164" /></geometry></collision>
-    <collision><origin xyz="-0.10899999737739563 0.02500000037252903 0.006000000052154064" rpy="0 0 0" /><geometry><sphere radius="0.019999999552965164" /></geometry></collision>
-    <collision><origin xyz="-0.11 0.001 0.007" rpy="0 0 0" /><geometry><sphere radius="0.02" /></geometry></collision>
-    <collision><origin xyz="-0.102 -0.03 0.002" rpy="0 0 0" /><geometry><sphere radius="0.02" /></geometry></collision>
+    <collision><origin xyz="-0.07000000029802322 -0.003000000026077032 -0.004999999888241291" rpy="0 0 0" /><geometry><sphere radius="0.04780000075697899" /></geometry></collision>
+    <collision><origin xyz="-0.024 -0.001 -0.004" rpy="0 0 0" /><geometry><sphere radius="0.043" /></geometry></collision>
+    <collision><origin xyz="-0.094 0.031 -0.001" rpy="0 0 0" /><geometry><sphere radius="0.02" /></geometry></collision>
+    <collision><origin xyz="-0.109 0.023 0.006" rpy="0 0 0" /><geometry><sphere radius="0.02" /></geometry></collision>
+    <collision><origin xyz="-0.11 -0.004 0.007" rpy="0 0 0" /><geometry><sphere radius="0.02" /></geometry></collision>
+    <collision><origin xyz="-0.10599999874830246 -0.02800000086426735 -0.0020000000949949026" rpy="0 0 0" /><geometry><sphere radius="0.019999999552965164" /></geometry></collision>
   </link>
   <link name="R_th_l0">
     <inertial>
@@ -37,9 +37,9 @@
         <mesh filename="meshes/visual/th_l0.glb" />
       </geometry>
     </visual>
-    <collision><origin xyz="-0.005 0.008 -0.004" rpy="0 0 0" /><geometry><sphere radius="0.014" /></geometry></collision>
-    <collision><origin xyz="0.003 0.005 -0.005" rpy="0 0 0" /><geometry><sphere radius="0.014" /></geometry></collision>
-    <collision><origin xyz="-0.012 0.017 -0.004" rpy="0 0 0" /><geometry><sphere radius="0.014" /></geometry></collision>
+    <collision><origin xyz="-0.005 -0.008 -0.0018" rpy="0 0 0" /><geometry><sphere radius="0.014" /></geometry></collision>
+    <collision><origin xyz="0.003 -0.005 -0.0008" rpy="0 0 0" /><geometry><sphere radius="0.014" /></geometry></collision>
+    <collision><origin xyz="-0.012 -0.017 -0.0018" rpy="0 0 0" /><geometry><sphere radius="0.014" /></geometry></collision>
   </link>
   <joint name="R_th_j0" type="revolute">
     <origin xyz="-0.04608 -0.01984 -0.02687" rpy="-0.00287 -0.21841 0.01325" />
@@ -60,9 +60,9 @@
         <mesh filename="meshes/visual/th_l1.glb" />
       </geometry>
     </visual>
-    <collision><origin xyz="-0.036 0.013 -0.002" rpy="0 0 0" /><geometry><sphere radius="0.019" /></geometry></collision>
-    <collision><origin xyz="0.01 -0.009 -0.001" rpy="0 0 0" /><geometry><sphere radius="0.019" /></geometry></collision>
-    <collision><origin xyz="-0.011 0.003 0.0" rpy="0 0 0" /><geometry><sphere radius="0.019" /></geometry></collision>
+    <collision><origin xyz="0.039124488830566406 -0.013972282409667969 0.0010455846786499023" rpy="0 0 0" /><geometry><sphere radius="0.01899999938905239" /></geometry></collision>
+    <collision><origin xyz="0.011159420013427734 -0.003459930419921875 0.00013017654418945312" rpy="0 0 0" /><geometry><sphere radius="0.01899999938905239" /></geometry></collision>
+    <collision><origin xyz="-0.0048253536224365234 0.008616447448730469 -0.0013541579246520996" rpy="0 0 0" /><geometry><sphere radius="0.01899999938905239" /></geometry></collision>
   </link>
   <joint name="R_th_j1" type="revolute">
     <origin xyz="-0.00675 -0.02097 -0.00276" rpy="3.13870 -0.00004 3.12870" />
@@ -83,7 +83,7 @@
         <mesh filename="meshes/visual/th_l2.glb" />
       </geometry>
     </visual>
-    <collision><origin xyz="-0.007 0.01 0.003" rpy="0 0 0" /><geometry><sphere radius="0.01845" /></geometry></collision>
+    <collision><origin xyz="0.008370459079742432 -0.008273124694824219 -0.00145682692527771" rpy="0 0 0" /><geometry><sphere radius="0.018449999392032623" /></geometry></collision>
   </link>
   <joint name="R_th_j2" type="revolute">
     <origin xyz="0.05088 -0.01301 0.00202" rpy="0 0 0" />

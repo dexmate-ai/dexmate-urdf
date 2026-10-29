@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from . import robots
+from . import robots, vega
 from .robots.paths import get_mesh_dir, get_robot_names, get_robot_path, get_urdf_paths
 
 LIB_PATH = Path(__file__).resolve().parent
@@ -14,4 +14,5 @@ __all__ = [
     "get_robot_path",
     "get_mesh_dir",
     "get_urdf_paths",
+    "vega",
 ]

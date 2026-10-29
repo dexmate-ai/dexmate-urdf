@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <robot name="vega_1u">
+  <disable_collisions link1="base_link" link2="lift_link" reason="Always"/>
+  <disable_collisions link1="base_link" link2="torso_flip_link" reason="Never"/>
   <disable_collisions link1="lift_link" link2="torso_flip_link" reason="Always"/>
   <disable_collisions link1="torso_flip_link" link2="L_arm_l1" reason="Always"/>
   <disable_collisions link1="torso_flip_link" link2="L_arm_l2" reason="Never"/>
